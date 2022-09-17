@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <script>
+    function cse()
+        {
+            var val=000;
+            var str='cse';
+            for(var i=val; i<val+1; i++)   
+            {
+                val=val+i;
+                id=str.concat(val);
+                f2.empid.value=id;
+            }
+        }</script>
+</head>
+<body>
+<form name="f1" action="addemp.php">
+<table align="center" cellspacing="5" >
+<caption><b><u>PERSONAL DETAILS</u></b></caption>
+<tr></tr><tr></tr><tr></tr>
+<tr><td>Prefix:</td><td><select name="prefix" required><option>Mr.</option><option>Ms.</option></select></td><td></td><td></td><td></td><td></td><td></td><td>First Name:</td><td><input type="text" name="first" required></td></tr>
+<tr><td>Middle Name:</td><td><input type="text" name="middle"></td><td></td><td></td><td></td><td></td><td></td><td>Last Name:</td><td><input type="text" name="last" required></td></tr>
+<tr><td>Date Of Birth:</td><td><input type="date" name="dob" required></td><td></td><td></td><td></td><td></td><td></td><td>PHN.NO:</td><td><input type="tel" pattern="+91-[0-9]{10}" name="number" required><td></tr>    
+<tr><td>Gender:</td><td><select name="gender" required><option>Male</option><option>Female</option><option>Other</option></select></td><td></td><td></td><td></td><td></td><td></td><td>Email-id:</td><td><input type="email" name="email" required></tr>
+<tr><td>Address:</td><td><input type="text" name="residence" required></td><td></td><td></td><td></td><td></td><td></td><td>City:</td><td><input type="text" name="city" required></tr>
+<tr><td>State:</td><td><select name="city" required><option>Andhra Pradesh</option><option>Telengana</option></select></td><td></td><td></td><td></td><td></td><td></td><td>Pincode:</td><td><input type="text" name="pin" required></tr>
+<tr><td>Aadhar-No:</td><td><input type="text" name="aadhar" required></td><td></td><td></td><td></td><td></td><td></td><td>Pan.No:</td><td><input type="text" name="pan" required></td></tr>
+<tr><td>Bank ACC.No:</td><td><input type="text" name="bank" required></td><td></td><td></td><td></td><td></td><td></td><td>PF ACC.No:</td><td><input type="text" name="pf" required></tr>
+</table><br><br><br>
+<table align="center" cellspacing="5" >
+<caption><b><u>PROFESSIONAL DETAILS</u></b></caption>
+<tr></tr><tr></tr><tr></tr>
+<tr><td>Branch:</td><td><select name="branch" required><option>CSE</option><option>ECE</option></select></td><td></td><td></td><td></td><td></td><td>Employee Type:</td><td><select name="emptype" required><option>Teaching</option><option>Non-Teaching</option><option>Attenders</option><option>consolidated</option></select></td></tr>
+<tr><td>Designation:</td><td><select name="designation" required><option>HOD</option><option>Professor</option><option>Associate Professor</option><option>Assistent profesor</option></select></td><td></td><td></td><td></td><td></td><td>Highest Degree:</td><td><input type="text" name="highestdegree" required></td></tr>
+<tr><td>Date Of Joining:</td><td><input type="date" name="doj" required></td><td></td><td></td><td></td><td></td><td>Job Experience:</td><td><input type="text" name="experience" required></td></tr>
+<tr></tr><tr></tr><tr></tr><tr></tr></table></form>
+<br><br><center><form name="f2" >
+    EMP ID:<input type="text" name="empid" readonly>
+    <input type="button" value="create" onclick="cse();">
+</form><br><br>
+    SET PASSWORD:<input type="password" name="password" ></center><br>
+    <form method="post" action="addemp.php">
+    <table align="center"><tr><td><input type="submit" value="ADD"></td><td></td><td></td><td></td><td><input type="reset" value="cancel"></td></tr></table>
+    </form></body></html>
+
+
