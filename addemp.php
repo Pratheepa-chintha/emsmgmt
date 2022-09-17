@@ -1,40 +1,51 @@
-<?
-$prefix=$_REQUEST['prefix'];
-$firstname=$_REQUEST['first'];
-$middlename=$_REQUEST['middle'];
-$lastname=$_REQUEST['last'];
-$dob=$_REQUEST['dob'];
-$phnno=$_REQUEST['number'];
-$gender=$_REQUEST['gender'];
-$email=$_REQUEST['mail'];
-$residence=$_REQUEST['residence'];
-$city=$_REQUEST['city'];
-$states=$_REQUEST['state'];
-$pincode=$_REQUEST['pin']
-$aadharno=$_REQUEST['aadhar'];
-$panno=$_REQUEST['pan'];
-$bankacc=$_REQUEST['bank'];
-$pfacc=$_REQUEST['pf'];
-$branch=$_REQUEST['branch'];
-$emptype=$_REQUEST['emptype'];
-$designation=$_REQUEST['designation'];
-$highestdegree=$_REQUEST['highestdegree'];
-$doj=$_REQUEST['doj'];
-$jobexperience=$_REQUEST['experience'];
-$empid=$_REQUEST['empid'];
-$passwords=$_REQUEST['password'];
-$empname=$lastname." ".$firstname." ".$middlename;
+<?php
 $con=mysqli_connect("localhost:3306","root"," ","emsdb");
 if($con->connect_error){
     die("connection failed".$con->connect_error);
   }
-  echo"connected successfully";  
-$add="INSERT INTO empdata(empid,prefix,empname,dob,phnno,gender,email,residence,city,states,pincode,aadharno,panno,bankacc,pfacc,branch,emptype,designation,highestdegree,doj,jobexperience,passwords) VALUES ('$empid','$prefix','$empname','$dob','$phnno','$gender','$email','$residence','$city','$states','$pincode','$aadharno','$panno','$bankacc','$pfacc','$branch','$emptype','$designation','$highestdegree','$doj','$jobexperience','$passwords')";
-if ($conn->query($add) === TRUE)
-    echo "New record created successfully";
-    header('location:addemp.html');
-else
-    echo"<br><br><center><h1>New record deos not created </h1>";
+else{
+  echo"connected successfully";
+}
+if(isset($_POST['ADD'])){
+    if((!empty($_POST['prefix']))&&(!empty($_POST['first']))&&(!empty($_POST['last']))&&(!empty($_POST['dob']))&&(!empty($_POST['number']))&&(!empty($_POST['gender']))&&(!empty($_POST['mail']))&&(!empty($_POST['residence']))&&(!empty($_POST['city']))&&(!empty($_POST['states']))&&(!empty($_POST['pin']))&&(!empty($_POST['aadhar']))&&(!empty($_POST['pan']))&&(!empty($_POST['bank']))&&(!empty($_POST['pf']))&&(!empty($_POST['branch']))&&(!empty($_POST['emptype']))&&(!empty($_POST['designation']))&&(!empty($_POST['highestdegree']))&&(!empty($_POST['doj']))&&(!empty($_POST['experience']))&&(!empty($_POST['empid']))&&(!empty($_POST['password']))&&(!empty($_POST['photo'])){
+        $prefix=$_POST['prefix'];
+        $firstname=$_POST['first'];
+        $lastname=$_POST['last'];
+        $empname=$lastname." ".$firstname;
+        $dob=$_POST['dob'];
+        $phnno=$_POST['number'];
+        $gender=$_POST['gender'];
+        $email=$_POST['email'];
+        $residence=$_POST['residence'];
+        $city=$_POST['city'];
+        $states=$_POST['states'];
+        $pincode=$_POST['pin'];
+        $aadharno=$_POST['aadhar'];
+        $panno=$_POST['pan'];
+        $bankacc=$_POST['bank'];
+        $pfacc=$_POST['pf'];
+        $branch=$_POST['branch'];
+        $emptype=$_POST['emptype'];
+        $designation=$_POST['designation'];
+        $highestdegree=$_POST['highestdegree'];
+        $doj=$_POST['doj'];
+        $jobexperience=$_POST['experience'];
+        $photo=$_POST['photo'];
+        $empid=$_POST['empid'];
+        $passwords=$_POST['password'];
+        $add="INSERT INTO empdata(empid,prefix,empname,dob,phnno,gender,email,residence,city,states,pincode,aadharno,panno,bankacc,pfacc,branch,emptype,designation,highestdegree,doj,jobexperience,passwords,photo) VALUES ('$empid','$prefix','$empname','$dob','$phnno','$gender','$email','$residence','$city','$states','$pincode','$aadharno','$panno','$bankacc','$pfacc','$branch','$emptype','$designation','$highestdegree','$doj','$jobexperience','$passwords','$photo')";
+        $run=mysqli_query($con,$add) or die (mysqli_error());
+        if($add){
+            echo"NEW RECOED CREATED SUCCESSFULLY";
+        }
+        else{
+            echo"RECORD DOES NOT CREATED";
+        }
+    }
+}
+else{
+       echo"Please fill all the records";
+   }
 ?>
 <!--<tr><td>Prefix:</td><td><select><option>Mr.</option><option>Ms.</option></select></td><td></td><td></td><td></td><td></td><td></td><td>First Name:</td><td><input type="text" name="t1"></td></tr>
 <tr><td>Middle Name:</td><td><input type="text" name="t2"></td><td></td><td></td><td></td><td></td><td></td><td>Last Name:</td><td><input type="text" name="t3"></td></tr>
