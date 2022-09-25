@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <script> 
+        function login(){
+        var username="Gagan";
+        var password=1234;
+        if(f1.t1.value==username&&f1.t2.value==password)
+        {
+             window.location="adminentry.html"
+        }
+        else
+         {
+            document.write("Invalid Username or Password")
+         }
+        }
+
+</script> 
+</head>
+<body>
+<form name="f1" action="adminentry.html">
+<table align="center">
+<caption>ADMIN</caption>
+<tr><td>Username:<td><input type="text" name="t1"></tr>
+<tr><td>Password:<td><input type="password" name="t2"></tr>
+<tr><td><td><input type="submit" value="login" onclick="login();"></tr>
+<tr><td><td><a href="pass.html">Forget Password</tr>
+</table></form></body></html>

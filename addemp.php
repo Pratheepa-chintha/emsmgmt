@@ -16,7 +16,7 @@ else{
         $email=$_POST['email'];
         $residence=$_POST['residence'];
         $city=$_POST['city'];
-        $states=$_POST['state'];
+        $states=$_POST['states'];
         $pincode=$_POST['pin'];
         $aadharno=$_POST['aadhar'];
         $panno=$_POST['pan'];
@@ -31,7 +31,7 @@ else{
         $photo=$_POST['photo'];
         $empid=$_POST['empid'];
         $passwords=$_POST['password'];
-        $add="INSERT INTO empdata(empid,prefix,empname,dob,phnno,gender,email,residence,city,state,pincode,aadharno,panno,bankacc,pfacc,branch,emptype,designation,highestdegree,doj,jobexperience,passwords,photo) VALUES ('$empid','$prefix','$empname','$dob','$phnno','$gender','$email','$residence','$city','$states','$pincode','$aadharno','$panno','$bankacc','$pfacc','$branch','$emptype','$designation','$highestdegree','$doj','$jobexperience','$passwords','$photo')";
+        $add="INSERT INTO empdata(empid,prefix,empname,dob,phnno,gender,email,residence,city,states,pincode,aadharno,panno,bankacc,pfacc,branch,emptype,designation,highestdegree,doj,jobexperience,passwords,photo) VALUES ('$empid','$prefix','$empname','$dob','$phnno','$gender','$email','$residence','$city','$states','$pincode','$aadharno','$panno','$bankacc','$pfacc','$branch','$emptype','$designation','$highestdegree','$doj','$jobexperience','$passwords','$photo')";
         $run=mysqli_query($con,$add);
         if($add){
             echo"NEW RECOED CREATED SUCCESSFULLY";
