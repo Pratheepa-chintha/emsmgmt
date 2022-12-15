@@ -1,8 +1,8 @@
 <?php
-$username=$_REQUEST['t1'];
-$password=$_REQUEST['t2'];
+$username=$_REQUEST['t3'];
+$password=$_REQUEST['t4'];
 $con=mysqli_connect("localhost:3306","root"," ","emsdb");
-$rows=mysqli_query($con,"select count(*) from elogin where username='$username' and password='$password'");
+$rows=mysqli_query($con,"select count(*) from elogin where username='$username' and passwords='$password'");
 $row=mysqli_fetch_row($rows);
 $n=$row[0];
 if($n==1)

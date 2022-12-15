@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <body>
-<form name="f1" action="addemp.php">        
+<form name="f1" action="addemp.php" method="$_POST">        
 <table align="center" cellspacing="5" > 
 <caption><b><u>PERSONAL DETAILS</u></b></caption>
 <tr></tr><tr></tr><tr></tr>
@@ -21,11 +21,11 @@
 <tr><td>Date Of Joining:<td></td><td><input type="date" name="date"></td><td></td><td></td><td></td><td></td><td>Job Experience:<td></td><td><input type="text" name="experience"></td></tr>
 </table>
 <br><br><center>
-EMP ID:<input type="text" name="empid" readonly>
+EMP ID:<input type="text" name="empid" >
 <input type="button" value="create" >
 <br><br>
 SET PASSWORD:<input type="password" name="password" ></center><br>
-<table align="center"><tr><td><input type="submit" value="ADD"></td><td></td><td></td><td></td><td><input type="reset" value="cancel"></td></tr></table>
+<table align="center"><tr><td><input type="submit" value="ADD" name="a"></td><td></td><td></td><td></td><td><input type="reset" value="cancel"></td></tr></table>
 </form></body></html>
 
 
