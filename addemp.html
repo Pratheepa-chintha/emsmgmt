@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <body>
-<form name="f1" action="addemp.php" method="$_POST">        
+<form name="f1" action="addemp.php" method="post">        
 <table align="center" cellspacing="5" > 
 <caption><b><u>PERSONAL DETAILS</u></b></caption>
 <tr></tr><tr></tr><tr></tr>
 <tr><td>Prefix:<td></td><td><select name="prefix"><option>Mr.</option><option>Ms.</option></select></td><td></td><td></td><td></td><td></td><td>First Name:<td></td><td><input type="text" name="first"></td></tr>
-<tr><td>Last Name:<td></td><td><input type="text" name="last"></td><td></td><td></td><td></td><td></td><td>Date Of Birth:<td></td><td><input type="date" name="date"></td></tr>
-<tr><td>PHN.NO:<td></td><td><input type="number" pattern="+91-[0-9]{10}"></td><td></td><td></td><td></td><td></td><td>Gender:<td></td><td><select name="gender"><option>Male</option><option>Female</option><option>Other</option></select></td></tr>
-<tr><td>Email-id:<td></td><td><input type="email" name="email"></td><td></td><td></td><td></td><td></td><td>Residence:<td></td><td><input type="text" name="residence"><td></td></td></tr>
+<tr><td>Last Name:<td></td><td><input type="text" name="last"></td><td></td><td></td><td></td><td></td><td>Date Of Birth:<td></td><td><input type="date" name="dob"></td></tr>
+<tr><td>PHN.NO:<td></td><td><input type="number" pattern="+91-[0-9]{10}" name="number"></td><td></td><td></td><td></td><td></td><td>Gender:<td></td><td><select name="gender"><option>Male</option><option>Female</option><option>Other</option></select></td></tr>
+<tr><td>Email-id:</td><td></td><td><input type="email" name="email"></td><td></td><td></td><td></td><td></td><td>Residence:</td><td></td><td><input type="text" name="residence"></td>
+<td></td></tr>
 <tr><td>City:<td></td><td><input type="text" name="city"></td><td></td><td></td><td></td><td></td><td>State:<td></td><td><select name="states"><option>Andhra Pradesh</option><option>Telengana</option></select></td></tr>
 <tr><td>Pincode:<td></td><td><input type="text" name="pin"></td><td></td><td></td><td></td><td></td><td>Aadhar-No:<td></td><td><input type="text" name="aadhar"></td></tr>
 <tr><td>Pan.No:<td></td><td><input type="text" name="pan"></td><td></td><td></td><td></td><td></td><td>Bank ACC.No:<td></td><td><input type="text" name="bank"></td></tr>
@@ -17,17 +18,13 @@
 <caption><b><u>PROFESSIONAL DETAILS</u></b></caption>
 <tr></tr><tr></tr><tr></tr>
 <tr><td>Branch:<td></td><td><select name="branch"><option>CSE</option><option>ECE</option></select></td><td></td><td></td><td></td><td></td><td>Employee Type:<td></td><td><select name="emptype"><option>Teaching</option><option>Non-Teaching</option><option>Attenders</option><option>consolidated</option></select></td></tr>
-<tr><td>Designation:<td></td><td><select name="designation"><option>HOD</option><option>Professor</option><option>Associate Professor</option><option>Assistent profesor</option></select><td></td><td></td><td></td><td></td></td><td>Highest Degree:<td></td><td><input type="text" name="highestdegree"></td></tr>
-<tr><td>Date Of Joining:<td></td><td><input type="date" name="date"></td><td></td><td></td><td></td><td></td><td>Job Experience:<td></td><td><input type="text" name="experience"></td></tr>
+<tr><td>Designation:</td><td><select name="designation"><option>HOD</option><option>Professor</option><option>Associate Professor</option><option>Assistent profesor</option></select></td><td></td><td></td><td></td><td>Highest Degree:<td></td><td><input type="text" name="highestdegree"></td></tr>
+<tr><td>Date Of Joining:<td></td><td><input type="date" name="doj"></td><td></td><td></td><td></td><td></td><td>Job Experience:<td></td><td><input type="text" name="experience"></td></tr>
 </table>
 <br><br><center>
 EMP ID:<input type="text" name="empid" >
-<input type="button" value="create" >
+<!--<input type="button" value="create" >-->
 <br><br>
 SET PASSWORD:<input type="password" name="password" ></center><br>
-<table align="center"><tr><td><input type="submit" value="ADD" name="a"></td><td></td><td></td><td></td><td><input type="reset" value="cancel"></td></tr></table>
+<table align="center"><tr><td><input type="submit" value="add" name="add"></td><td></td><td></td><td></td><td><input type="reset" value="cancel"></td></tr></table>
 </form></body></html>
-
-
-
-
